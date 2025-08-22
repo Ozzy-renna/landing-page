@@ -1,0 +1,145 @@
+*{
+margin:0; padding:0; box-sizing:border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #fff6f8;
+    color: #5c3d45;
+    line-height: 1.6;
+
+}
+.btn{
+    display:inline-block;
+    background: #e49dac;
+    color:#fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+.btn:hover {
+  background: #bf6273;
+}
+
+.hero{
+    min-height: 100vh;
+    background-image: url("perfume2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding:30px;
+}
+.navbar {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 246, 248, 0.95); /* slightly transparent */
+  z-index: 100;
+}
+
+.logo{
+    font-size: 1.5rem;
+    color: #5c3d45;
+}
+.hero-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.hero-text{
+    max-width: 50%;
+    flex: 1 1 300px;
+    animation: fadeUp 1.2s forwards ease 0.4s;
+}
+.hero h1{
+    font-size: 3rem;
+}
+.hero p{
+    margin-top: 10px;
+}
+.about{
+    padding: 80px 30px;
+    text-align: center;
+}
+.about h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.subscribe{
+    background: #eac4ca;
+    padding: 60px 30px;
+    text-align: center;
+}
+.subscribe form{
+    margin-top: 20px;
+}
+.subscribe input{
+    padding: 10px 15px;
+    border-radius: 25px 0 0 25px;
+    border:none;
+    width: 250px;
+}
+.subscribe button{
+    padding: 10px 25px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    background: #bf6273;
+    color: #fff;
+}
+footer{
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+@keyframes fadeUp {
+  0%   { opacity: 0; transform: translateY(30px); }
+  30%  { opacity: 0.2; }
+  60%  { opacity: 0.7; }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.hero-content, .about, .subscribe {
+  opacity: 0;
+  animation: fadeUp 1.2s forwards ease;
+}
+
+/* Delay animations so they appear one after the other */
+.hero-content { animation-delay: 0.3s; }
+.about        { animation-delay: 0.8s; }
+.subscribe    { animation-delay: 1.3s; }
+
+@keyframes slideRight{
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* start leftt */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);    /*ends at normal position*/
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* stack items vertically */
+    align-items: center;    /* center content */
+    text-align: center;     /* center text */
+  }
+
+  .hero-text {
+    max-width: 90%;   /* almost full width on mobile */
+  }
+
+  .hero-text .btn {
+    width: 100%;      /* buttons stretch full width */
+    margin-top: 10px; /* spacing between buttons */
+  }
+}
+
+
+
