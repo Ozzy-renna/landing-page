@@ -38,7 +38,7 @@ body{
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 246, 248, 0.95); /* slightly transparent */
+  background: rgba(255, 246, 248, 0.95); 
   z-index: 100;
 }
 
@@ -109,7 +109,7 @@ footer{
   animation: fadeUp 1.2s forwards ease;
 }
 
-/* Delay animations so they appear one after the other */
+
 .hero-content { animation-delay: 0.3s; }
 .about        { animation-delay: 0.8s; }
 .subscribe    { animation-delay: 1.3s; }
@@ -117,27 +117,27 @@ footer{
 @keyframes slideRight{
   0% {
     opacity: 0;
-    transform: translateX(-100px); /* start leftt */
+    transform: translateX(-100px); 
   }
   100% {
     opacity: 1;
-    transform: translateX(0);    /*ends at normal position*/
+    transform: translateX(0);    
   }
 }
 @media (max-width: 768px) {
   .hero-content {
-    flex-direction: column; /* stack items vertically */
-    align-items: center;    /* center content */
-    text-align: center;     /* center text */
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;     
   }
 
   .hero-text {
-    max-width: 90%;   /* almost full width on mobile */
+    max-width: 90%;   
   }
 
   .hero-text .btn {
-    width: 100%;      /* buttons stretch full width */
-    margin-top: 10px; /* spacing between buttons */
+    width: 100%;      
+    margin-top: 10px; 
   }
 }
 
